@@ -1,4 +1,4 @@
-export default class Animal {
+class Animal {
 
     constructor (name, color, weight, type) {
         this._name = name;
