@@ -1,4 +1,4 @@
-import Goat from "./Goat";
+import Animal from "./Animal";
 class Goat extends Animal {
     constructor (name, color, weight, type) {
       super(name, color, weight, type);
