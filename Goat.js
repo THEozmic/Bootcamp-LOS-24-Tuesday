@@ -10,6 +10,6 @@ class Goat extends Animal {
 
     graze () {
         this.walk();
-        this.eat();
+        this._eat();
     }
 }
