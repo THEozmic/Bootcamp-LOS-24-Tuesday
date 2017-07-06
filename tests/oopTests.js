@@ -1,29 +1,31 @@
-const leo = new Lion("Leo", "brown", 300, "mammal");
-const daisy = new Goat("Daisy", "black", 100, "mammal");
-let assert = chai.assert;
+const chai = require('chai');
+const Animal = require('../Animal');
+const leo = require('../Lion');
+const daisy = require('../Goat');
+
+const assert = chai.assert;
 
 describe ('Leo', function () {
-  
-  it ('should be instance of Animal class', function () {
-    
+
+  it ('should be instance of Animal class', () => {
     assert.instanceOf(leo, Animal);
   });
 
-  it ('should be type of object', function () {
+  it ('should be type of object', () => {
       assert.typeOf(leo, 'object');
   });
 
   it ('should increase weight after "hunt"', () => {
-      let oldWeight = leo.getWeight();
+      const oldWeight = leo.getWeight();
       leo.hunt();
-      let newWeight = leo.getWeight();
+      const newWeight = leo.getWeight();
       assert(oldWeight < newWeight);
   });
 
   it ('should be able to get new name', () => {
-      let oldName = leo.getName();
+      const oldName = leo.getName();
       leo.setName("Pantha");
-      let newName = leo.getName();
+      const newName = leo.getName();
       assert(oldName !== newName);
   });
 
