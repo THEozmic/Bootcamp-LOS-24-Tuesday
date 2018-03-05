@@ -38,9 +38,13 @@ module.exports =
             return this._type;
         }
 
-        _increaseWeight () {
+        _increaseWeight (by) {
             // it's easier to gain weight!
-            this._weight += 2;
+            if (by) {
+               this._weight += by
+            } else {
+                this._weight += 2;
+            }
         }
 
         _decreaseWeight () {
